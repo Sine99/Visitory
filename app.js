@@ -4,7 +4,7 @@ const passport = require("passport");
 const session =require("express-session");
 const cookieParser =require("cookie-parser");
 const exphbs  = require('express-handlebars');
-const bodyParser = require("body-Parser");
+const bodyParser = require("body-parser");
 
 const moment = require('moment');
 const methodOverride = require("method-override");
