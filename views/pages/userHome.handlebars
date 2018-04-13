@@ -1,0 +1,53 @@
+<h5>
+    Welcome {{user.firstName}} 
+</h5>
+<p><b>Your Visitories</b></p>
+
+{{#if visitory}}
+<div class="row">
+    {{#each visitory}}
+    <div class="col s12 m3">
+        <div class="card teal">
+
+            <div class="card-image">
+                <form action="/visitories/{{id}}?_method=DELETE" method="post" >
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn-floating halfway-fab red" value = "Delete"><i class="fa fa-trash"></i></button>
+                </form>
+            </div>
+
+                {{!-- <a href="/" class="btn-floating halfway-fab red">
+                    <i class="fa fa-trash"></i>
+                </a> --}}
+            
+            {{!-- <div class="card-image"> --}}
+            <div>
+                <a href="/visitories/update/{{id}}" class="btn-floating halfway-fab red">
+                    <i class="fa fa-edit"></i>
+                </a>
+            {{!-- </div> --}}
+            </div>
+            <div class="card-content center-align">
+                <p >
+                    <h5 style="color:#FFFFFF";><strong >{{place}}</strong></h5>
+                    {{state}}
+                </p>
+                {{!-- <p class = "visitory-text">{{stripTags( truncate body 150) }}</p> --}}
+                <br>
+                <div class="chip">
+                    <img src="{{user.image}}">
+                    {{user.firstName}}
+                </div>
+            </div>
+            <div class="card-action center-align white" >
+                <a class="btn red" href ="/visitories/display/{{id}}">read</a> 
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>No Visitory found</p>
+    {{/each}}
+</div>
+{{else}}
+  <p>You have not created any stories yet</p>
+{{/if}}

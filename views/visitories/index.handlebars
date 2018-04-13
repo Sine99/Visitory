@@ -1,0 +1,36 @@
+<h3>Visitories</h3>
+<div class="row">
+    {{#each visitory}}
+    <div class="col s12 m3">
+        <div class="card teal">
+            {{!-- <div class="card-image"> --}}
+                {{!-- <a href="/visitories/edit/{{id}}" class="btn-floating halfway-fab red">
+                    <i class="fa fa-edit"></i>
+                </a> --}}
+            {{!-- </div> --}}
+            <div class="card-content center-align ">
+                <p >
+                    <h5 style="color:#FFFFFF";><strong >{{place}}</strong></h5>
+                    {{state}}
+                </p>
+                
+
+                {{!-- <p class = "visitory-text">{{stripTags( truncate body 150) }}</p> --}}
+                <br>
+
+
+                <div class="chip">
+                    <img src="{{user.image}}">
+                    {{user.firstName}}
+                </div>
+            </div>
+            <div class="card-action center-align white" >
+                <a class="btn red" href ="/visitories/display/{{id}}">read</a> 
+            </div>
+
+        </div>
+    </div>
+    {{else}}
+    <p>No Visitory found</p>
+    {{/each}}
+</div>

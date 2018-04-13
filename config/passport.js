@@ -32,6 +32,7 @@ module.exports = (passport)=>{
                    googleID : profile.id, 
                 }).then(user => {
                     // Return the already existing user
+                    // image : user.profile.photos[0].value.substring(0, profile.photos[0].value.indexOf('?'));
                     if(user){
                         console.log("user exists")
                         done(null, user);

@@ -3,7 +3,7 @@
     
     <div class="nav-wrapper">
         
-        <a href="/visitory" class="brand-logo center">Visitory</a>
+        <a href="/" class="brand-logo center">Visitory</a>
 
         <a href="#" data-activates="main-menu"
         class="button-collapse show-on-large"><i class="fa fa-bars"></i></a>
@@ -12,7 +12,7 @@
         <ul class = "right hide-on-small-only">
             {{#if user}}
                 {{!-- use of gloabl variable from app.js --}}
-                <li><a href="/dashboard"> Welcome <b>{{user.firstName}}</b></a></li> 
+                <li><a href="/userHome"> Welcome <b>{{user.firstName}}</b></a></li> 
                 <li><a href="/auth/logout"> <i class="fa fa-sign-out"></i> Logout </a></li>
             {{else}}
                 <li><a href="/visitories"><i class = "fa fa-book">  Visitories </i></a></li> 
@@ -31,7 +31,7 @@
         
             {{#if user}}
                 <li class="divider"></li>
-                <li><a href="/dashboard"><i class="fa fa-cog"></i> Dashboard</a></li>
+                <li><a href="/userHome"><i class="fa fa-cog"></i> Homepage</a></li>
                 <li><a href="/myvisits"><i class="fa fa-user"></i> My Visits</a></li>
                 <li><a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
             {{/if}}
